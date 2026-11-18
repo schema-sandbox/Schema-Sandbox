@@ -10,3 +10,4 @@ html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3,html[lang="en"] .serif{
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
 
 .three-hero h1{font-size:clamp(44px,5vw,76px);max-width:980px}.three-hero h1>span{display:inline-block}
+html[lang="en"] .statement,html[lang="en"] .tagline,html[lang="en"] .large-p,html[lang="en"] .footer-statement,html[lang="en"] .hero-project strong{font-family:Georgia,"Times New Roman",serif}html[lang="en"] .three-hero .statement{font-size:clamp(24px,2.4vw,34px);max-width:650px;line-height:1.45}
