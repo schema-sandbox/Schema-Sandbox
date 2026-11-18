@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schema Sandbox Research | Open Methodology &amp; SIP-Core</title>
+  <meta name="description" content="Schema Sandbox open methodology, reference patterns, SIP-Core specifications, licenses and citation guidance.">
+  <link rel="icon" type="image/png" href="assets/schema_sandbox_logo.png">
+  <link rel="stylesheet" href="website.css?v=1.0.4">
+</head>
+<body>
+
+  <!-- Background Orbs -->
+  <div class="glow-orb glow-1"></div>
+  <div class="glow-orb glow-2"></div>
+  <div class="glow-orb glow-3"></div>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-dot"></span>
+        Schema Sandbox
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html#top" class="nav-link"><span class="lang-en">Company home</span><span class="lang-cn">公司主页</span></a></li>
+        <li><a href="http://schemadocs.org/" class="nav-link nav-featured" target="_blank" rel="noopener"><span class="lang-en">Schema Docs</span><span class="lang-cn">Schema Docs</span></a></li>
+        <li><a href="https://geo.schemasandbox.com/" class="nav-link" target="_blank" rel="noopener"><span class="lang-en">Brand Shuttle GEO</span><span class="lang-cn">品牌飞梭 GEO</span></a></li>
+        <li><a href="#methodology" class="nav-link"><span class="lang-en">Methodology</span><span class="lang-cn">方法论</span></a></li>
+        <li><a href="#showcase" class="nav-link"><span class="lang-en">Showcase</span><span class="lang-cn">案例展示</span></a></li>
+        <li><a href="#specifications" class="nav-link"><span class="lang-en">Specifications</span><span class="lang-cn">协议规范</span></a></li>
+        <li><a href="#license" class="nav-link"><span class="lang-en">License</span><span class="lang-cn">授权与引用</span></a></li>
+        <li>
+          <div class="lang-switch">
+            <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" data-lang="cn" onclick="setLanguage('cn')">中</button>
+          </div>
+        </li>
+        <li>
+          <a href="https://github.com/schema-sandbox/Schema-Sandbox" class="github-icon-link" target="_blank" aria-label="GitHub Repository">
+            <svg height="24" width="24" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Existing research and product content -->
+    <section class="hero">
+      <div class="hero-content">
+        <span class="tagline lang-en">Public Methodology Draft v0.1.0</span>
+        <span class="tagline lang-cn">公开方法学草案 v0.1.0</span>
+
+        <h1 class="hero-title lang-en">The Contract Layer for Safe AI Agent Execution</h1>
+        <h1 class="hero-title lang-cn">AI Agent 安全执行的合同层</h1>
+
+        <p class="hero-desc lang-en">
+          Large language models generate probabilistically. Production systems need deterministic boundaries. Schema Sandbox defines a layered neuro-symbolic methodology to validate, authorize, isolate, and audit AI actions before they reach enterprise or industrial runtimes.
+        </p>
+        <p class="hero-desc lang-cn">
+          大语言模型是概率性生成的。生产环境系统在 Agent 调用工具、读写文件、访问 API 之前，需要确定性的边界。Schema Sandbox 定义了一个分层的 neuro-symbolic 方法论，在模型输出到达企业或工业运行时之前进行验证、授权、隔离和审计。
+        </p>
+
+        <div class="status-disclaimer">
+          <div class="status-disclaimer-indicator"></div>
+          <div class="status-disclaimer-text lang-en">
+            <strong>Current Status:</strong> Public Methodology Draft v0.1.0 &nbsp;|&nbsp; <strong>Reference patterns only:</strong> Not a production-certified safety runtime.
+          </div>
+          <div class="status-disclaimer-text lang-cn">
+            <strong>当前状态:</strong> 公开方法学草案 v0.1.0 &nbsp;|&nbsp; <strong>仅供参考:</strong> 非生产环境认证的安全运行环境。
+          </div>
+        </div>
+
+        <a href="http://schemadocs.org/" class="flagship-card" target="_blank" rel="noopener" aria-label="Open Schema Docs">
+          <div class="flagship-copy">
+            <span class="flagship-label lang-en">Flagship implementation</span>
+            <span class="flagship-label lang-cn">主要实践项目</span>
+            <h2 class="flagship-title lang-en">Schema Docs turns the theory into a working document gateway.</h2>
+            <h2 class="flagship-title lang-cn">Schema Docs 是 Schema Sandbox 理论的核心实践项目。</h2>
+            <p class="flagship-desc lang-en">A local-first desktop toolkit for large document conversion, masking, review, and AI handoff. It is the clearest public implementation of the Schema Sandbox boundary model.</p>
+            <p class="flagship-desc lang-cn">一个本地优先的大文档转换、脱敏、审查与 AI 交接工具，是 Schema Sandbox 边界模型最清晰的公开实践。</p>
+          </div>
+          <div class="flagship-action">
+            <span class="lang-en">Open schemadocs.org</span>
+            <span class="lang-cn">打开 schemadocs.org</span>
+          </div>
+        </a>
+
+        <div class="hero-ctas">
+          <a href="#license" class="btn btn-primary">
+            <span class="lang-en">Cite This Methodology</span>
+            <span class="lang-cn">引用此方法论</span>
+          </a>
+          <a href="#showcase" class="btn btn-secondary">
+            <span class="lang-en">Explore Showcase</span>
+            <span class="lang-cn">浏览案例展示</span>
+          </a>
+          <a href="https://github.com/schema-sandbox/Schema-Sandbox" class="btn btn-secondary" target="_blank">
+            <span class="lang-en">View GitHub Repo</span>
+            <span class="lang-cn">访问 GitHub 仓库</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image-container">
+        <div class="hero-image-wrapper">
+          <img src="assets/schema_sandbox_concept.png" alt="Schema Sandbox Concept Diagram" class="hero-image">
+        </div>
+        <a href="http://schemadocs.org/" class="schema-docs-preview" target="_blank" rel="noopener" aria-label="Open Schema Docs homepage">
+          <img src="assets/schema_docs_gateway_infographic.png" alt="Schema Docs local document gateway workflow">
+          <div class="schema-docs-preview-caption">
+            <strong>Schema Docs</strong>
+            <span>Local document gateway for AI workflows</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Brand Shuttle GEO Section -->
+    <section class="section" id="geo">
+      <div class="section-header">
+        <span class="section-subtitle lang-en">Desktop App</span>
+        <span class="section-subtitle lang-cn">桌面应用</span>
+
+        <h2 class="section-title lang-en">Brand Shuttle GEO</h2>
+        <h2 class="section-title lang-cn">品牌飞梭 GEO</h2>
+
+        <p class="section-desc lang-en">
+          A commercial desktop gateway that diagnoses whether an export website is discoverable, understood, trusted, and cited by search engines and AI search systems. It turns a single website, category, and competitor into a verifiable action plan with publishable assets.
+        </p>
+        <p class="section-desc lang-cn">
+          一款判断您的网站是否能被搜索引擎和 AI 搜索系统发现、理解、信任与引用的商业桌面软件。从一个网站、一个品类、一个竞品出发，生成可校验的行动计划与可发布的资产。
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="glass-card">
+          <div class="card-icon">🔎</div>
+          <h3 class="card-title lang-en">AI-Visible Diagnosis</h3>
+          <h3 class="card-title lang-cn">AI 可见性诊断</h3>
+          <p class="card-desc lang-en">Detect how discoverable, interpretable, and citable your pages are to LLM and AI search agents, with a scored, evidence-backed verdict.</p>
+          <p class="card-desc lang-cn">量化你的网站对 LLM 与 AI 搜索的可发现、可理解与可引用程度，并给出基于证据的分项评分结论。</p>
+        </div>
+        <div class="glass-card">
+          <div class="card-icon">🛠️</div>
+          <h3 class="card-title lang-en">Verifiable Action Plan</h3>
+          <h3 class="card-title lang-cn">可验证行动计划</h3>
+          <p class="card-desc lang-en">A grounded, prioritized plan generated from one website, one category, and one competitor — actionable, trackable, and re-runnable.</p>
+          <p class="card-desc lang-cn">由单一网站、品类与竞品生成的有依据、有优先级的计划，可执行、可追踪、可复跑。</p>
+        </div>
+        <div class="glass-card">
+          <div class="card-icon">📦</div>
+          <h3 class="card-title lang-en">Publishable Assets</h3>
+          <h3 class="card-title lang-cn">可直接发布的资产</h3>
+          <p class="card-desc lang-en">Generates JSON-LD, FAQ blocks, and AI-ready <code>llms.txt</code>, <code>llms-full.txt</code>, <code>pricing.md</code>, <code>products.md</code>, <code>faq.md</code> drafts plus a root <code>llms.txt</code> quality audit.</p>
+          <p class="card-desc lang-cn">生成 JSON-LD、FAQ 块，以及 AI 就绪的 <code>llms.txt</code>、<code>llms-full.txt</code>、<code>pricing.md</code>、<code>products.md</code>、<code>faq.md</code> 草稿和根 <code>llms.txt</code> 质量审计。</p>
+        </div>
+        <div class="glass-card">
+          <div class="card-icon">🖥️</div>
+          <h3 class="card-title lang-en">Local-First Desktop</h3>
+          <h3 class="card-title lang-cn">本地优先桌面端</h3>
+          <p class="card-desc lang-en">A practical implementation of the Schema Sandbox boundary model — validated, audited, and installed as a signed, licensed desktop app for Windows.</p>
+          <p class="card-desc lang-cn">Schema Sandbox 边界模型的一次实际落地——经过校验、审计，以带授权的 Windows 桌面应用形式交付。</p>
+        </div>
+      </div>
+
+      <div class="hero-ctas" style="justify-content:center; margin-top:3rem;">
+        <a href="https://geo.schemasandbox.com/" class="btn btn-primary" target="_blank" rel="noopener">
+          <span class="lang-en">Visit Brand Shuttle GEO</span>
+          <span class="lang-cn">访问 品牌飞梭 GEO</span>
+        </a>
+        <a href="https://geo.schemasandbox.com/download.html" class="btn btn-secondary" target="_blank" rel="noopener">
+          <span class="lang-en">Download &amp; Activate</span>
+          <span class="lang-cn">下载与交付</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Flow Diagram Section -->
+    <section class="section" id="methodology">
+      <div class="section-header">
+        <span class="section-subtitle lang-en">Cognitive Boundaries</span>
+        <span class="section-subtitle lang-cn">认知边界</span>
+
+        <h2 class="section-title lang-en">Nine-Layer Agent Execution Flow</h2>
+        <h2 class="section-title lang-cn">九层 Agent 执行流程</h2>
+
+        <p class="section-desc lang-en">
+          Schema Sandbox sits between raw LLM outputs and persistent enterprise runtimes. Below is the simplified execution flow representing the core boundary gates.
+        </p>
+        <p class="section-desc lang-cn">
+          Schema Sandbox 介于原始 LLM 输出与持久化企业运行时之间。以下是核心边界网关的简化执行流程。
+        </p>
+      </div>
+
+      <div class="flow-container">
+        <div class="flow-step-wrapper">
+          <div class="flow-step">
+            <div class="flow-step-title lang-en">Agent Proposal</div>
+            <div class="flow-step-title lang-cn">Agent 提案</div>
+            <div class="flow-step-desc lang-en">Probabilistic action stream generated by LLM</div>
+            <div class="flow-step-desc lang-cn">LLM 生成的概率性动作流</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step active-gate">
+            <div class="flow-step-title lang-en">Validate Input</div>
+            <div class="flow-step-title lang-cn">校验输入</div>
+            <div class="flow-step-desc lang-en">Check constraints & sanitize prompt inputs</div>
+            <div class="flow-step-desc lang-cn">检查约束并清理提示词输入</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step active-gate">
+            <div class="flow-step-title lang-en">Authorize Scope</div>
+            <div class="flow-step-title lang-cn">授权范围</div>
+            <div class="flow-step-desc lang-en">Match proposal to permission boundaries</div>
+            <div class="flow-step-desc lang-cn">将动作提案匹配至权限边界</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step-title lang-en">Execute or Ask</div>
+            <div class="flow-step-title lang-cn">执行或询问</div>
+            <div class="flow-step-desc lang-en">Invoke safe tools or request human sign-off</div>
+            <div class="flow-step-desc lang-cn">调用安全工具或请求人工签批</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step active-gate">
+            <div class="flow-step-title lang-en">Validate Output</div>
+            <div class="flow-step-title lang-cn">校验输出</div>
+            <div class="flow-step-desc lang-en">Review output payload & log evidence</div>
+            <div class="flow-step-desc lang-cn">审查输出数据并记录证据</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Paradigms Section -->
+    <section class="section">
+      <div class="features-grid">
+        <div class="glass-card">
+          <div class="card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+          </div>
+          <h3 class="card-title lang-en">1. Capability Boundary</h3>
+          <h3 class="card-title lang-cn">1. 能力边界</h3>
+          <p class="card-desc lang-en">Defines what an agent is allowed to generate. Enforces strict input contracts, structured tool call grammars, and validation of outputs against formatting or semantic rules.</p>
+          <p class="card-desc lang-cn">定义允许 Agent 生成的内容。强制执行严格的输入合同、结构化工具调用语法，并根据格式或语义规则校验输出。</p>
+        </div>
+        <div class="glass-card">
+          <div class="card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+          </div>
+          <h3 class="card-title lang-en">2. Execution Boundary</h3>
+          <h3 class="card-title lang-cn">2. 执行边界</h3>
+          <p class="card-desc lang-en">Limits how actions are physically run. Enforces isolated workspace partitions, strict local filesystem boundaries, network access scopes, and conditional human approval escalations.</p>
+          <p class="card-desc lang-cn">限制动作的物理运行方式。强制执行隔离的工作区分区、严格的本地文件系统边界、网络访问范围以及条件性人工审批升级。</p>
+        </div>
+        <div class="glass-card">
+          <div class="card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+          </div>
+          <h3 class="card-title lang-en">3. Evidence Boundary</h3>
+          <h3 class="card-title lang-cn">3. 证据边界</h3>
+          <p class="card-desc lang-en">Ensures high traceability. Records input/output hashes, exact tool arguments, permission validation results, trace metadata, and tamper-proof evidence logs.</p>
+          <p class="card-desc lang-cn">确保高度可追溯性。记录输入/输出哈希、精确的工具参数、权限校验结果、追踪元数据以及防篡改的证据日志。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industrial Middleware Showcase Section -->
+    <section class="section" id="showcase">
+      <div class="section-header">
+        <span class="section-subtitle lang-en">Product Showcase</span>
+        <span class="section-subtitle lang-cn">案例展示</span>
+
+        <h2 class="section-title lang-en">Industrial Middleware Reference Patterns</h2>
+        <h2 class="section-title lang-cn">工业级 AI 中间件参考模式</h2>
+
+        <p class="section-desc lang-en">
+          AI agents should not directly connect to operational systems. We present five reference middleware patterns showing how Schema Sandbox isolates and validates actions.
+        </p>
+        <p class="section-desc lang-cn">
+          AI Agent 不应直接连接到生产系统。我们展示了五种参考中间件模式，以演示 Schema Sandbox 如何隔离和校验动作。
+        </p>
+      </div>
+
+      <div class="showcase-container">
+        <!-- Sidebar Tabs -->
+        <div class="showcase-tabs">
+          <button class="showcase-tab active" data-tab="tab-maintenance">
+            <span class="lang-en">1. Maintenance Work Order</span>
+            <span class="lang-cn">1. 设备维护工单</span>
+          </button>
+          <button class="showcase-tab" data-tab="tab-quality">
+            <span class="lang-en">2. Quality Inspection Report</span>
+            <span class="lang-cn">2. 质量检测报告</span>
+          </button>
+          <button class="showcase-tab" data-tab="tab-permission">
+            <span class="lang-en">3. ERP/MES Query Gateway</span>
+            <span class="lang-cn">3. ERP/MES 查询网关</span>
+          </button>
+          <button class="showcase-tab" data-tab="tab-intake">
+            <span class="lang-en">4. Supplier Document Intake</span>
+            <span class="lang-cn">4. 供应商文档录入</span>
+          </button>
+          <button class="showcase-tab" data-tab="tab-ehs">
+            <span class="lang-en">5. EHS Compliance Assistant</span>
+            <span class="lang-cn">5. EHS 安全合规助手</span>
+          </button>
+        </div>
+
+        <!-- Detail Panels -->
+        <!-- Panel 1 -->
+        <div class="showcase-content active" id="tab-maintenance">
+          <div class="showcase-header">
+            <h3 class="showcase-title lang-en">Industrial Maintenance Work Order Gateway</h3>
+            <h3 class="showcase-title lang-cn">设备维护工单网关</h3>
+
+            <span class="showcase-one-line lang-en">AI drafts work orders, but cannot bypass permission gates or submit high-risk actions without review.</span>
+            <span class="showcase-one-line lang-cn">AI 可以草拟维护工单，但不能绕过权限边界或在未经人工审批下提交高风险操作。</span>
+          </div>
+          <div class="showcase-body">
+            <div class="showcase-details">
+              <div>
+                <h4 class="showcase-meta-title lang-en">The Problem</h4>
+                <h4 class="showcase-meta-title lang-cn">面临问题</h4>
+                <p class="showcase-meta-content lang-en">
+                  If an AI maintenance agent directly accesses CMMS or MES APIs upon reading an alarm, it risks spamming duplicated, unauthorized, or critically flawed work orders.
+                </p>
+                <p class="showcase-meta-content lang-cn">
+                  如果 AI 维护 Agent 在读取设备警报后直接调用 CMMS 或 MES API，可能会导致大量重复、越权或存在严重逻辑缺陷的工单被自动提交。
+                </p>
+              </div>
+              <div>
+                <h4 class="showcase-meta-title lang-en">Enforced Contracts</h4>
+                <h4 class="showcase-meta-title lang-cn">强制执行合同</h4>
+
+                <ul class="contract-list lang-en">
+                  <li class="contract-item">Input validation: Validates alarm code and machine identifiers.</li>
+                  <li class="contract-item">Permission scope: Read machine status, create draft work-orders only.</li>
+                  <li class="contract-item">Output validation: Ensure structured work order payload matches enterprise schemas.</li>
+                  <li class="contract-item">Human sign-off routing: High-priority alarms force decision redirection.</li>
+                </ul>
+                <ul class="contract-list lang-cn">
+                  <li class="contract-item">输入校验：验证警报代码和设备标识符。</li>
+                  <li class="contract-item">权限范围：读取设备状态，仅限创建工单草稿。</li>
+                  <li class="contract-item">输出校验：确保生成的工单数据符合企业系统 Schema 规范。</li>
+                  <li class="contract-item">人工审批路由：高优先级警报将强制重定向决策至人工审批。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="showcase-code-wrapper">
+              <span class="code-title lang-en">SAMPLE CONTRACT REJECTION</span>
+              <span class="code-title lang-cn">合同拒绝返回包样例</span>
+              <pre><code>{
+  "decision": "ask",
+  "reason": "high_priority_work_order_requires_human_approval",
+  "evidence_id": "ev_maintenance_001"
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2 -->
+        <div class="showcase-content" id="tab-quality">
+          <div class="showcase-header">
+            <h3 class="showcase-title lang-en">Quality Inspection Report Contract</h3>
+            <h3 class="showcase-title lang-cn">质量检测报告合同</h3>
+
+            <span class="showcase-one-line lang-en">AI generates inspection reports, but must satisfy field validation and forbidden-claim constraints.</span>
+            <span class="showcase-one-line lang-cn">AI 可以生成质检报告，但必须满足字段、数据证据和禁用词约束。</span>
+          </div>
+          <div class="showcase-body">
+            <div class="showcase-details">
+              <div>
+                <h4 class="showcase-meta-title lang-en">The Problem</h4>
+                <h4 class="showcase-meta-title lang-cn">面临问题</h4>
+                <p class="showcase-meta-content lang-en">
+                  AI-generated quality reports often hallucinate claims of certitude, omit required batch references, or state compliant status unsupported by actual raw test scores.
+                </p>
+                <p class="showcase-meta-content lang-cn">
+                  AI 生成的报告可能遗漏关键批次引用、过度承诺合格性，或者得出没有真实测试数据支持的结论。
+                </p>
+              </div>
+              <div>
+                <h4 class="showcase-meta-title lang-en">Enforced Contracts</h4>
+                <h4 class="showcase-meta-title lang-cn">强制执行合同</h4>
+
+                <ul class="contract-list lang-en">
+                  <li class="contract-item">Required fields: Batch ID, inspector key, raw value, tolerance limits.</li>
+                  <li class="contract-item">Forbidden patterns: Denies marketing-speak like "100% compliant" or "guaranteed defect-free".</li>
+                  <li class="contract-item">Evidence binding: Forces cryptographic signature matching of input test records.</li>
+                </ul>
+                <ul class="contract-list lang-cn">
+                  <li class="contract-item">必要字段：批次 ID、质检员密钥、原始测量值、容差范围。</li>
+                  <li class="contract-item">禁用模式：禁止使用“100%合格”或“保证无缺陷”等营销辞令，除非有真实检测数据支撑。</li>
+                  <li class="contract-item">证据绑定：强制对输入测试记录进行加密数字签名包装。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="showcase-code-wrapper">
+              <span class="code-title lang-en">SAMPLE CONTRACT REJECTION</span>
+              <span class="code-title lang-cn">合同拒绝返回包样例</span>
+              <pre><code>{
+  "decision": "reject",
+  "reason": "forbidden_pattern_matched",
+  "detail": {
+    "field": "conclusion",
+    "value": "This batch is 100% compliant and guaranteed safe."
+  }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3 -->
+        <div class="showcase-content" id="tab-permission">
+          <div class="showcase-header">
+            <h3 class="showcase-title lang-en">ERP / MES Permission Gateway</h3>
+            <h3 class="showcase-title lang-cn">ERP / MES 查询网关</h3>
+
+            <span class="showcase-one-line lang-en">No direct database connections. AI queries pass through schema permission layers and field filters.</span>
+            <span class="showcase-one-line lang-cn">禁止直接连接数据库。所有的 AI 查询都必须经过 Schema 权限层和字段过滤。</span>
+          </div>
+          <div class="showcase-body">
+            <div class="showcase-details">
+              <div>
+                <h4 class="showcase-meta-title lang-en">The Problem</h4>
+                <h4 class="showcase-meta-title lang-cn">面临问题</h4>
+                <p class="showcase-meta-content lang-en">
+                  General-purpose AI agents can generate direct queries that request restricted operational logs, leak customer databases, or leak cross-partition organizational data.
+                </p>
+                <p class="showcase-meta-content lang-cn">
+                  通用型 AI Agent 可能会生成直接的数据库查询，从而获取受限的运营日志、泄露客户数据库或跨隔离区读取数据。
+                </p>
+              </div>
+              <div>
+                <h4 class="showcase-meta-title lang-en">Enforced Contracts</h4>
+                <h4 class="showcase-meta-title lang-cn">强制执行合同</h4>
+
+                <ul class="contract-list lang-en">
+                  <li class="contract-item">Role-aware scope: Maps agent session key to specific tables and query actions.</li>
+                  <li class="contract-item">Field-level sanitization: Automatically strips or hashes sensitive fields.</li>
+                  <li class="contract-item">Deny-by-default: Rejects any ambiguous or multi-join operations.</li>
+                </ul>
+                <ul class="contract-list lang-cn">
+                  <li class="contract-item">角色感知范围：将 Agent 会话密钥映射到特定的表和查询动作。</li>
+                  <li class="contract-item">字段级脱敏：自动剥离或哈希敏感字段。</li>
+                  <li class="contract-item">默认拒绝：拒绝任何模糊的或包含多表关联的操作。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="showcase-code-wrapper">
+              <span class="code-title lang-en">SAMPLE CONTRACT REJECTION</span>
+              <span class="code-title lang-cn">合同拒绝返回包样例</span>
+              <pre><code>{
+  "decision": "reject",
+  "reason": "scope_violation",
+  "detail": {
+    "proposed_action": "ERP.readPayrollData",
+    "error": "action_outside_allowed_tool_scope"
+  }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 4 -->
+        <div class="showcase-content" id="tab-intake">
+          <div class="showcase-header">
+            <h3 class="showcase-title lang-en">Supplier Document Intake</h3>
+            <h3 class="showcase-title lang-cn">供应商文档录入</h3>
+
+            <span class="showcase-one-line lang-en">AI parses supplier documents, but only validated, structured records enter enterprise systems.</span>
+            <span class="showcase-one-line lang-cn">AI 可以从非结构化文档中提取供应商信息，但只有经过校验的字段才能写入业务系统。</span>
+          </div>
+          <div class="showcase-body">
+            <div class="showcase-details">
+              <div>
+                <h4 class="showcase-meta-title lang-en">The Problem</h4>
+                <h4 class="showcase-meta-title lang-cn">面临问题</h4>
+                <p class="showcase-meta-content lang-en">
+                  Invoices, packing list attachments, and emails contain highly irregular data formats. Unvalidated AI extraction leads to corrupt database records.
+                </p>
+                <p class="showcase-meta-content lang-cn">
+                  发票、装箱单附件和电子邮件包含极不规则的数据格式。未经校验的 AI 提取会导致数据库记录混乱或损坏。
+                </p>
+              </div>
+              <div>
+                <h4 class="showcase-meta-title lang-en">Enforced Contracts</h4>
+                <h4 class="showcase-meta-title lang-cn">强制执行合同</h4>
+
+                <ul class="contract-list lang-en">
+                  <li class="contract-item">Required structures: Supplier name, registry code, tax identifier, currency.</li>
+                  <li class="contract-item">Schema checking: Enforces ISO country boundaries and correct postal formats.</li>
+                  <li class="contract-item">Fallback logic: Auto-sends missing field complaints back to the supplier.</li>
+                </ul>
+                <ul class="contract-list lang-cn">
+                  <li class="contract-item">必需结构：供应商名称、注册码、税号、货币类型。</li>
+                  <li class="contract-item">Schema 检查：强制执行 ISO 国家代码边界和正确的邮编格式。</li>
+                  <li class="contract-item">回退逻辑：自动将缺失字段的申诉意见发送回供应商。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="showcase-code-wrapper">
+              <span class="code-title lang-en">SAMPLE CONTRACT REJECTION</span>
+              <span class="code-title lang-cn">合同拒绝返回包样例</span>
+              <pre><code>{
+  "decision": "reject",
+  "reason": "missing_required_fields",
+  "detail": {
+    "missing": [
+      "registration_number"
+    ],
+    "action": "provide_fallback_or_ask_supplier"
+  }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 5 -->
+        <div class="showcase-content" id="tab-ehs">
+          <div class="showcase-header">
+            <h3 class="showcase-title lang-en">EHS Compliance Assistant</h3>
+            <h3 class="showcase-title lang-cn">EHS 安全合规助手</h3>
+
+            <span class="showcase-one-line lang-en">AI drafts EHS incident responses, but critical safety classifications require human verification.</span>
+            <span class="showcase-one-line lang-cn">AI 可以起草 EHS 事故纠正措施，但关键的安全分类和建议需要明确的人工审核。</span>
+          </div>
+          <div class="showcase-body">
+            <div class="showcase-details">
+              <div>
+                <h4 class="showcase-meta-title lang-en">The Problem</h4>
+                <h4 class="showcase-meta-title lang-cn">面临问题</h4>
+                <p class="showcase-meta-content lang-en">
+                  Environmental, Health, and Safety (EHS) logs are legally binding. AI recommendations could ignore mandatory safety escalation rules or omit vital hazard notices.
+                </p>
+                <p class="showcase-meta-content lang-cn">
+                  环境、健康和安全（EHS）日志具有法律效力。AI 的建议如果忽略了强制性安全升级规则或遗漏了危害警示，将带来合规风险。
+                </p>
+              </div>
+              <div>
+                <h4 class="showcase-meta-title lang-en">Enforced Contracts</h4>
+                <h4 class="showcase-meta-title lang-cn">强制执行合同</h4>
+
+                <ul class="contract-list lang-en">
+                  <li class="contract-item">Input provenance check: Ensures report inputs originate from verified sensors.</li>
+                  <li class="contract-item">Safety keyword triggers: Red-flags sentences requesting immediate containment.</li>
+                  <li class="contract-item">Verification logs: Collects evidence files showing human confirmation of safety codes.</li>
+                </ul>
+                <ul class="contract-list lang-cn">
+                  <li class="contract-item">数据源验证：确保报告输入来自于通过验证的传感器。</li>
+                  <li class="contract-item">安全词触发：红色警示任何包含紧急控制或泄露等敏感词的句子。</li>
+                  <li class="contract-item">验证日志：收集记录了安全代码的人工确认凭证的证据文件。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="showcase-code-wrapper">
+              <span class="code-title lang-en">SAMPLE CONTRACT REJECTION</span>
+              <span class="code-title lang-cn">合同拒绝返回包样例</span>
+              <pre><code>{
+  "decision": "ask",
+  "reason": "high_risk_corrective_action_detected",
+  "detail": {
+    "trigger_field": "priority",
+    "trigger_value": "immediate_escalation_required"
+  }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Specifications Section -->
+    <section class="section" id="specifications">
+      <div class="section-header">
+        <span class="section-subtitle lang-en">Standard Protocol</span>
+        <span class="section-subtitle lang-cn">标准协议</span>
+
+        <h2 class="section-title lang-en">Schema Interoperability Protocol (SIP-Core)</h2>
+        <h2 class="section-title lang-cn">Schema 互操作协议 (SIP-Core)</h2>
+
+        <p class="section-desc lang-en">
+          SIP-Core is the minimal manifest spec designed to describe sandboxes as secure, discoverable capability assets.
+        </p>
+        <p class="section-desc lang-cn">
+          SIP-Core 是最小清单规范，旨在将沙箱描述为安全、可发现的“能力资产”。
+        </p>
+      </div>
+
+      <div class="specs-grid">
+        <div class="specs-features">
+          <div class="spec-feature">
+            <div class="spec-feature-icon">✦</div>
+            <div>
+              <h4 class="spec-feature-title lang-en">Input/Output Validation schemas</h4>
+              <h4 class="spec-feature-title lang-cn">输入/输出校验 Schema</h4>
+              <p class="spec-feature-desc lang-en">Describe JSON-Schema configurations that govern agent inputs and sanitization patterns.</p>
+              <p class="spec-feature-desc lang-cn">描述控制 Agent 输入和脱敏规则的 JSON-Schema 配置。</p>
+            </div>
+          </div>
+          <div class="spec-feature">
+            <div class="spec-feature-icon">✦</div>
+            <div>
+              <h4 class="spec-feature-title lang-en">Granular Permission Scopes</h4>
+              <h4 class="spec-feature-title lang-cn">细粒度的权限范围</h4>
+              <p class="spec-feature-desc lang-en">Locks local paths (`fs_scope`), restricts API hosts (`net_scope`), and defines allowed tool names (`tool_scope`).</p>
+              <p class="spec-feature-desc lang-cn">锁定本地路径 (`fs_scope`)，限制 API 主机 (`net_scope`)，并限制允许的工具名称 (`tool_scope`)。</p>
+            </div>
+          </div>
+          <div class="spec-feature">
+            <div class="spec-feature-icon">✦</div>
+            <div>
+              <h4 class="spec-feature-title lang-en">Traceable Rejection Payloads</h4>
+              <h4 class="spec-feature-title lang-cn">可追溯的拒绝负载</h4>
+              <p class="spec-feature-desc lang-en">Standard error formats returning `SIP_ERR_INPUT_VIOLATION` or `SIP_ERR_SCOPE_LOCKED` for fast self-healing prompts.</p>
+              <p class="spec-feature-desc lang-cn">标准错误格式，向 Agent 返回冲突字段以实现自我修复（Self-healing Prompt）。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="spec-preview-card">
+          <div class="spec-preview-header">
+            <span class="code-title">sip_manifest.json</span>
+            <span class="spec-preview-badge">SIP v0.1.0</span>
+          </div>
+          <pre style="margin:0;"><code style="font-size:0.8rem;">{
+  "sip_version": "0.1.0",
+  "sandbox_id": "industrial_maintenance_workorder",
+  "capability_type": "industrial.workorder.gateway",
+  "input_contract": {
+    "schema_ref": "./schemas/input.schema.json",
+    "sanitize_input": true
+  },
+  "permission_scope": {
+    "fs_scope": ["./workspace/reports"],
+    "net_scope": ["mes.example.com:443"],
+    "tool_scope": ["MES.readStatus", "MES.createWorkOrder"],
+    "human_approval": true
+  }
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Licensing & Citation -->
+    <section class="section" id="license">
+      <div class="section-header">
+        <span class="section-subtitle lang-en">Open Access</span>
+        <span class="section-subtitle lang-cn">开放访问</span>
+
+        <h2 class="section-title lang-en">License & Citation Guide</h2>
+        <h2 class="section-title lang-cn">开源许可与引用指南</h2>
+
+        <p class="section-desc lang-en">
+          Schema Sandbox is free for commercial and non-commercial application, provided that attribution rules are respected.
+        </p>
+        <p class="section-desc lang-cn">
+          Schema Sandbox 免费向商业和非商业应用开放，但需严格遵守署名与引用规则。
+        </p>
+      </div>
+
+      <div class="license-grid">
+        <!-- License Card -->
+        <div class="glass-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <h3 class="card-title lang-en">Dual Open-Source License</h3>
+            <h3 class="card-title lang-cn">双重开源许可证</h3>
+
+            <p class="card-desc lang-en" style="margin-bottom:1.5rem;">
+              The Schema Sandbox repository operates on a split license:
+            </p>
+            <p class="card-desc lang-cn" style="margin-bottom:1.5rem;">
+              Schema Sandbox 仓库采用分层许可证结构：
+            </p>
+
+            <ul class="contract-list lang-en" style="margin-bottom:1.5rem;">
+              <li class="contract-item"><strong>Content & Methodology</strong>: Licensed under Creative Commons Attribution 4.0 International (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" style="color:var(--secondary); text-decoration:none;">CC BY 4.0</a>).</li>
+              <li class="contract-item"><strong>Code & JSON Schemas</strong>: Provided under the <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" style="color:var(--secondary); text-decoration:none;">Apache License 2.0</a>.</li>
+            </ul>
+            <ul class="contract-list lang-cn" style="margin-bottom:1.5rem;">
+              <li class="contract-item"><strong>内容与方法论</strong>：采用 Creative Commons Attribution 4.0 International (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" style="color:var(--secondary); text-decoration:none;">CC BY 4.0</a>) 许可。</li>
+              <li class="contract-item"><strong>代码与 JSON Schema</strong>：采用 <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" style="color:var(--secondary); text-decoration:none;">Apache 2.0</a> 开源许可证。</li>
+            </ul>
+
+            <p class="card-desc lang-en" style="font-size:0.85rem; color:var(--text-muted);">
+              Note: Trademark names "Schema Sandbox" and "SIP" are reserved. See <a href="https://github.com/schema-sandbox/Schema-Sandbox/blob/main/TRADEMARK.md" target="_blank" style="color:var(--text-secondary); text-decoration:underline;">TRADEMARK.md</a> for guidelines.
+            </p>
+            <p class="card-desc lang-cn" style="font-size:0.85rem; color:var(--text-muted);">
+              注意：Schema Sandbox 和 SIP 等商标权保留。详见 <a href="https://github.com/schema-sandbox/Schema-Sandbox/blob/main/TRADEMARK.md" target="_blank" style="color:var(--text-secondary); text-decoration:underline;">TRADEMARK.md</a> 准则。
+            </p>
+          </div>
+        </div>
+
+        <!-- Attribution Card -->
+        <div class="attribution-card">
+          <div>
+            <h3 class="card-title lang-en">Suggested Attribution</h3>
+            <h3 class="card-title lang-cn">建议署名鸣谢</h3>
+
+            <p class="card-desc lang-en">
+              If you build, adapt, or teach using the Schema Sandbox methodology, please show this notice:
+            </p>
+            <p class="card-desc lang-cn">
+              如果您基于 Schema Sandbox 进行二次开发、适配或教学，请展示此鸣谢声明：
+            </p>
+
+            <div class="attribution-box">
+              <span class="attribution-text lang-en" id="attribution-text-copy-en">Based on the Schema Sandbox methodology by Tengjiao Liu and Hongzong Si.</span>
+              <span class="attribution-text lang-cn" id="attribution-text-copy-cn">基于 Tengjiao Liu 与 Hongzong Si 的 Schema Sandbox 方法论。</span>
+              <button class="copy-btn" onclick="copyAttribution()" aria-label="Copy Attribution text">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
+                </svg>
+              </button>
+              <div class="copied-toast" id="copy-toast">Copied!</div>
+            </div>
+
+            <p class="card-desc lang-en" style="font-size:0.85rem; color:var(--text-muted);">
+              For academic citations, download the BibTeX metadata from <a href="https://github.com/schema-sandbox/Schema-Sandbox/blob/main/CITATION.cff" target="_blank" style="color:var(--text-secondary); text-decoration:underline;">CITATION.cff</a>.
+            </p>
+            <p class="card-desc lang-cn" style="font-size:0.85rem; color:var(--text-muted);">
+              学术引用请从 <a href="https://github.com/schema-sandbox/Schema-Sandbox/blob/main/CITATION.cff" target="_blank" style="color:var(--text-secondary); text-decoration:underline;">CITATION.cff</a> 下载 BibTeX 元数据。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <span class="footer-logo-dot"></span>
+            Schema Sandbox
+          </a>
+          <p class="footer-desc lang-en">
+            Course production, practical AI tools and open research from SCHEMA SANDBOX TECHNOLOGY LIMITED.
+          </p>
+          <p class="footer-desc lang-cn">
+            圖式沙箱科技有限公司提供课程制作、实用 AI 工具与开放研究。
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="footer-link-title lang-en">Specifications</span>
+          <span class="footer-link-title lang-cn">协议规范</span>
+          <a href="https://github.com/schema-sandbox/Schema-Sandbox/blob/main/specs/sip-core-v0.1.md" class="footer-link" target="_blank">SIP-Core Spec</a>
+          <a href="https://github.com/schema-sandbox/Schema-Sandbox/tree/main/schemas" class="footer-link" target="_blank">JSON Schemas</a>
+          <a href="https://github.com/schema-sandbox/Schema-Sandbox/tree/main/industrial" class="footer-link" target="_blank">Industrial Middleware</a>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="footer-link-title lang-en">Repository</span>
+          <span class="footer-link-title lang-cn">托管仓库</span>
+          <a href="https://github.com/schema-sandbox/Schema-Sandbox" class="footer-link" target="_blank">GitHub Project</a>
+          <a href="https://github.com/schema-sandbox/Schema-Sandbox/blob/main/papers/schema-sandbox-nine-layer-public-methodology-draft.md" class="footer-link" target="_blank">Methodology Paper</a>
+          <a href="https://github.com/schema-sandbox/Schema-Sandbox/blob/main/CITATION.cff" class="footer-link" target="_blank">Citation Metadata</a>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="footer-link-title lang-en">Legal</span>
+          <span class="footer-link-title lang-cn">法律条款</span>
+          <a href="https://github.com/schema-sandbox/Schema-Sandbox/blob/main/LICENSE-CONTENT.md" class="footer-link" target="_blank">Content License (CC BY 4.0)</a>
+          <a href="https://github.com/schema-sandbox/Schema-Sandbox/blob/main/LICENSE-CODE.md" class="footer-link" target="_blank">Code License (Apache 2.0)</a>
+          <a href="https://github.com/schema-sandbox/Schema-Sandbox/blob/main/TRADEMARK.md" class="footer-link" target="_blank">Trademark Policy</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="lang-en"><strong>Website operated by SCHEMA SANDBOX TECHNOLOGY LIMITED (圖式沙箱科技有限公司), Hong Kong.</strong></p>
+        <p class="lang-cn"><strong>网站运营主体：圖式沙箱科技有限公司（SCHEMA SANDBOX TECHNOLOGY LIMITED），香港。</strong></p>
+        <p class="lang-en">Schema Sandbox methodology: &copy; 2026 Tengjiao Liu and Hongzong Si. Content licensed under CC BY 4.0; code and schemas under Apache-2.0 unless otherwise stated. Trademarks reserved.</p>
+        <p class="lang-cn">Schema Sandbox 方法论：&copy; 2026 Tengjiao Liu 与 Hongzong Si。内容采用 CC BY 4.0 许可；代码与 Schema 采用 Apache-2.0 许可证。保留商标所有权。</p>
+
+        <p class="lang-en">Disclaimer: This methodology is an engineering draft and does not constitute safety warranties or legal advice.</p>
+        <p class="lang-cn">免责声明：本方法论属于工程草案，不构成安全保证或法律建议。</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Tab switching logic for showcases
+    document.querySelectorAll('.showcase-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.showcase-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.showcase-content').forEach(c => c.classList.remove('active'));
+
+        tab.classList.add('active');
+        const contentId = tab.getAttribute('data-tab');
+        document.getElementById(contentId).classList.add('active');
+      });
+    });
+
+    // Copy to clipboard logic
+    function copyAttribution() {
+      const activeLang = document.documentElement.getAttribute('lang') || 'en';
+      const textId = activeLang === 'cn' ? 'attribution-text-copy-cn' : 'attribution-text-copy-en';
+      const text = document.getElementById(textId).innerText;
+
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('copy-toast');
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
+      });
+    }
+
+    // Language switching logic
+    function setLanguage(lang) {
+      document.documentElement.setAttribute('lang', lang);
+      localStorage.setItem('preferred-lang', lang);
+
+      // Update active state of language toggle buttons
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+    }
+
+    // Auto-detect browser language or load preference
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('preferred-lang');
+      if (savedLang) {
+        setLanguage(savedLang);
+      } else {
+        const browserLang = navigator.language || navigator.userLanguage;
+        if (browserLang && (browserLang.startsWith('zh') || browserLang.startsWith('cn'))) {
+          setLanguage('cn');
+        } else {
+          setLanguage('en');
+        }
+      }
+    });
+  </script>
+</body>
+</html>
