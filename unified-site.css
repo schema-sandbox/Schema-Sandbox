@@ -4,6 +4,7 @@
 
 /* Research page: shared Schema Sandbox palette and type system. */
 body.research-site{margin:0;background:var(--paper);color:var(--ink);font:16px/1.8 var(--sans);-webkit-font-smoothing:antialiased}
+body.research-site::before{display:none!important;content:none!important}
 .research-site .glow-orb{display:none!important}
 .research-site header{position:sticky;top:0;z-index:40;background:rgba(247,244,237,.97);border-bottom:1px solid var(--line);box-shadow:none;backdrop-filter:blur(14px)}
 .research-site .nav-container{width:min(1320px,calc(100% - 72px));max-width:none;min-height:92px;margin:0 auto;padding:0;display:flex;align-items:center;gap:28px}
@@ -35,7 +36,7 @@ body.research-site{margin:0;background:var(--paper);color:var(--ink);font:16px/1
 .research-site .flagship-label,.research-site .section-subtitle{display:block;color:var(--accent);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
 .research-site .flagship-title{margin:8px 0;color:var(--ink);font:500 1.17rem/1.4 var(--serif)}
 .research-site .flagship-desc{margin:0;color:var(--body);font-size:.83rem;line-height:1.7}
-.research-site .flagship-action{padding:8px 0 8px 18px;border-left:1px solid var(--line);color:var(--ink);font-size:.76rem;font-weight:700;white-space:nowrap}
+.research-site .flagship-action{display:inline-flex;align-items:center;justify-content:center;justify-self:end;min-width:0;padding:10px 14px;border:1px solid var(--ink);border-radius:4px;background:var(--ink);color:#fff;font-size:.76rem;font-weight:700;white-space:nowrap}
 .research-site .hero-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .research-site .btn{display:inline-flex;align-items:center;justify-content:center;min-height:45px;padding:10px 16px;border:1px solid var(--ink);border-radius:4px;background:var(--ink);color:#fff;font-size:.82rem;font-weight:600;line-height:1.4;text-decoration:none;transition:background .2s,color .2s,border-color .2s}
 .research-site .btn-primary:hover{background:#315343;border-color:#315343}
@@ -95,7 +96,7 @@ body.research-site{margin:0;background:var(--paper);color:var(--ink);font:16px/1
   .research-site main.container{width:calc(100% - 72px)}
   .research-site .hero{gap:38px}
   .research-site .flagship-card{grid-template-columns:1fr}
-  .research-site .flagship-action{padding:10px 0 0;border-left:0;border-top:1px solid var(--line)}
+  .research-site .flagship-action{justify-self:start}
 }
 @media(max-width:760px){
   .research-site header{position:relative}
