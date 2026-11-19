@@ -8,6 +8,7 @@ body.research-site{margin:0;background:var(--paper);color:var(--ink);font:16px/1
 .research-site header{position:sticky;top:0;z-index:40;background:rgba(247,244,237,.97);border-bottom:1px solid var(--line);box-shadow:none;backdrop-filter:blur(14px)}
 .research-site .nav-container{width:min(1320px,calc(100% - 72px));max-width:none;min-height:92px;margin:0 auto;padding:0;display:flex;align-items:center;gap:28px}
 .research-site .logo{display:flex;align-items:center;gap:12px;flex:0 0 auto;color:var(--ink);font:700 1rem/1.2 var(--sans);letter-spacing:.08em;text-decoration:none}
+.research-site .logo,.research-site .hero-title,.research-site .section-title,.research-site .flagship-title,.research-site .card-title,.research-site .spec-feature-title,.research-site .showcase-title,.research-site .showcase-meta-title,.research-site .footer-logo{-webkit-text-fill-color:currentColor!important;background-image:none!important;opacity:1}
 .research-site .logo-dot{display:block;width:38px;height:38px;flex:0 0 38px;border:1px solid #b7c3b2;border-radius:50%;background:var(--sage);box-shadow:inset 0 0 0 7px var(--paper);position:relative}
 .research-site .logo-dot:after{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--accent);inset:0;margin:auto}
 .research-site .nav-menu{margin:0;padding:0;display:flex;align-items:center;justify-content:flex-end;gap:4px;list-style:none;flex:1;min-width:0}
