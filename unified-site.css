@@ -57,7 +57,9 @@ body.research-site::before{display:none!important;content:none!important}
 .research-site .features-grid,.research-site .specs-grid,.research-site .license-grid{display:grid;gap:16px}
 .research-site .glass-card,.research-site .spec-preview-card,.research-site .attribution-card,.research-site .showcase-container,.research-site .contract-item,.research-site .spec-feature{border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.78);color:var(--body);box-shadow:0 12px 28px rgba(35,53,41,.045);backdrop-filter:none}
 .research-site .glass-card{padding:23px}
-.research-site .card-icon,.research-site .spec-feature-icon{color:var(--accent)}
+.research-site .card-icon,.research-site .spec-feature-icon{color:var(--accent);background:var(--sage);border-color:#d6dbd1;box-shadow:none}
+.research-site code{padding:2px 5px;border-radius:4px;background:#e7eadf;color:var(--ink)}
+.research-site pre code{padding:0;background:transparent;color:inherit}
 .research-site .card-title,.research-site .spec-feature-title,.research-site .showcase-title,.research-site .showcase-meta-title{color:var(--ink);font-family:var(--serif);font-weight:600}
 .research-site .card-desc,.research-site .spec-feature-desc,.research-site .showcase-meta-content{color:var(--body);line-height:1.75}
 .research-site .flow-container{padding:20px;border:1px solid var(--line);border-radius:18px;background:#f1f0e8;box-shadow:none}
